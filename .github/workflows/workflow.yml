@@ -1,15 +1,7 @@
 name: CI for Despegar project
 
-# Controles que se tienen en cuenta cuando el workflow corre
 # Activa el workflow con un push (tambien se puede pull request) a una rama
 on: push
-
-
-
-
-  #Permite que este workflow se pueda correr tambien manualmente desde github (en la seccion Actions)
-workflow_dispatch:
-
 # Aquellas acciones que ejecutara nuestro workflow
 jobs:
   # El nombre de un job
