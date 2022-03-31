@@ -4,7 +4,6 @@ name: CI for Despegar project
 on: push
 # Aquellas acciones que ejecutara nuestro workflow
 jobs:
-  # El nombre de un job
   build:
     runs-on: ubuntu-latest
     steps:
