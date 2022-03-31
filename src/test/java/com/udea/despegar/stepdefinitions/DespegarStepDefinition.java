@@ -13,7 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-
+import com.udea.despegar.utils.Action;
 
 import static com.udea.despegar.userinterface.DespegarHomePage.*;
 import static com.udea.despegar.userinterface.DespegarListFlyPage.*;
