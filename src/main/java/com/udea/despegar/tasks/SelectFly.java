@@ -31,7 +31,7 @@ public class SelectFly implements Task {
     public <T extends Actor> void performAs(T actor) {
         actor.attemptsTo(
                 WaitUntil.the(buttonAnuncio,isVisible()).forNoMoreThan(20).seconds(),
-                Click.on(buttonAnuncio),
+   //             Click.on(buttonAnuncio),
 
                 WaitUntil.the(buttonBuy,isVisible()).forNoMoreThan(10).seconds(),
                 Click.on(buttonBuy),
