@@ -13,7 +13,7 @@ import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.actors.OnlineCast;
-import com.udea.despegar.utils.Action;
+
 
 import static com.udea.despegar.userinterface.DespegarHomePage.*;
 import static com.udea.despegar.userinterface.DespegarListFlyPage.*;
@@ -21,6 +21,7 @@ import static com.udea.despegar.userinterface.DespegarSuccesMsmPage.MESSAGE_TO_C
 import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.*;
 import static org.hamcrest.core.IsEqual.equalTo;
+import static com.udea.despegar.utils.Action.waitForSecond;
 
 public class DespegarStepDefinition {
 

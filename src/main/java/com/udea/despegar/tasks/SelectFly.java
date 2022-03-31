@@ -22,8 +22,8 @@ public class SelectFly implements Task {
         this.buttonContinuar = buttonContinuar;
     }
 
-    public static Performable selectBuyButton(Target buyButton, Target buttonAnuncio, Target buttonContinuar) {
-        return Tasks.instrumented(SelectFly.class, buyButton,buttonAnuncio,buttonContinuar);
+    public static Performable selectBuyButton(Target buyButton, Target buttonContinuar) {
+        return Tasks.instrumented(SelectFly.class, buyButton,buttonContinuar);
     }
 
 
