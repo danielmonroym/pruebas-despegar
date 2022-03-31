@@ -13,17 +13,15 @@ import static net.serenitybdd.screenplay.matchers.WebElementStateMatchers.isVisi
 public class SelectFly implements Task {
 
     private Target buttonBuy;
-    private Target buttonAnuncio;
     private Target buttonContinuar;
 
-    public SelectFly(Target buttonBuy, Target buttonAnuncio, Target buttonContinuar) {
+    public SelectFly(Target buttonBuy, Target buttonContinuar) {
         this.buttonBuy = buttonBuy;
-        this.buttonAnuncio = buttonAnuncio;
         this.buttonContinuar = buttonContinuar;
     }
 
-    public static Performable selectBuyButton(Target buyButton, Target buttonContinuar) {
-        return Tasks.instrumented(SelectFly.class, buyButton,buttonContinuar);
+    public static Performable selectBuyButton(Target buyButton,Target buttonContinuar) {
+        return Tasks.instrumented(SelectFly.class, buyButton, buttonContinuar);
     }
 
 
