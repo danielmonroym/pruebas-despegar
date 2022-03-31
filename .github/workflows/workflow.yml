@@ -5,20 +5,26 @@ on: push
 # Aquellas acciones que ejecutara nuestro workflow
 jobs:
   build:
+    # maquina virtual a usar en el pipeline
     runs-on: ubuntu-latest
     steps:
+      # obtiene registros de los pipelines previos para ahorrar tiempo
       - uses: actions/checkout@v2
+      # configura la maquina para usar java
       - uses: actions/setup-java@v2
         with:
           java-version: '8'
           distribution: 'adopt'
+      # permisos para usar gradle
       - name: Make gradlew executable
         run: chmod +x ./gradlew
+      # hace build y corre los tests con gradle
       - name: Build with Gradle
         run: ./gradlew test
+      # sube el jar
       - uses: actions/upload-artifact@v2
         with:
           name: Package
           path: build/libs
-
+      # guarda el pipeline en cache
       - uses: actions/checkout@v2
