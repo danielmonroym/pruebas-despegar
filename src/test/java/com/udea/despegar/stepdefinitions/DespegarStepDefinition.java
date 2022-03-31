@@ -38,7 +38,8 @@ public class DespegarStepDefinition {
     public void ingresaLaInformacionDeBusquedaDelVueloY(String origen, String destino) {
         theActorInTheSpotlight().attemptsTo(GoToModalidadIdaVuelta.checkSelecSoloIdaVuelta(CHECK_IDA_VUELTA));
         theActorInTheSpotlight().attemptsTo(FillInformation.fly(origen,destino, ORIGEN_FIELD, DESTINO_FIELD));
-        theActorInTheSpotlight().attemptsTo(SelectFly.selectBuyButton(COMPRAR_BUTTON,ANUNCIO_BUTTON,CONTINUAR_BUTTON));
+        waitForSecond(6);
+        theActorInTheSpotlight().attemptsTo(SelectFly.selectBuyButton(COMPRAR_BUTTON,CONTINUAR_BUTTON));
     }
 
     @Then("se valida el mensaje {string}")
